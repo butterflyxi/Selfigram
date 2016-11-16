@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nC7-O2-BVI">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,15 +14,15 @@
             <objects>
                 <tableViewController id="wtJ-Jg-hlP" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EAx-bE-c6Q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1DY-9E-g0x">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1DY-9E-g0x" id="f9u-Fp-yQ9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -47,7 +47,7 @@
                         <viewControllerLayoutGuide type="bottom" id="H41-oK-gel"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LNn-Nf-b62">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -57,30 +57,58 @@
             </objects>
             <point key="canvasLocation" x="1225" y="63"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="qN4-gI-U19">
             <objects>
-                <viewController id="19y-d5-FTb" sceneMemberID="viewController">
+                <viewController id="19y-d5-FTb" customClass="ProfileViewController" customModule="Selfigram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oQG-U8-hdw"/>
                         <viewControllerLayoutGuide type="bottom" id="TCc-rE-Jrs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KHB-G2-MMV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-6s-htC">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-6s-htC">
+                                <rect key="frame" x="40" y="110" width="240" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="2Z5-cA-PXS"/>
+                                    <constraint firstAttribute="height" constant="185" id="Ghh-cu-kgs"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbr-ZQ-yWt">
+                                <rect key="frame" x="109" y="311" width="82" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D52-4c-ZYY">
+                                <rect key="frame" x="40" y="264" width="69" height="40"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="19y-d5-FTb" eventType="touchUpInside" id="1VM-in-x9h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8cs-6s-htC" firstAttribute="top" secondItem="oQG-U8-hdw" secondAttribute="bottom" constant="46" id="4fK-ry-B4X"/>
+                            <constraint firstItem="Mbr-ZQ-yWt" firstAttribute="top" secondItem="8cs-6s-htC" secondAttribute="bottom" constant="30" id="G0i-nB-trp"/>
+                            <constraint firstItem="8cs-6s-htC" firstAttribute="leading" secondItem="D52-4c-ZYY" secondAttribute="trailing" constant="-69" id="W0H-Dd-Jfe"/>
+                            <constraint firstItem="D52-4c-ZYY" firstAttribute="top" secondItem="8cs-6s-htC" secondAttribute="bottom" constant="-17" id="WNH-z9-i3z"/>
+                            <constraint firstItem="8cs-6s-htC" firstAttribute="centerX" secondItem="KHB-G2-MMV" secondAttribute="centerX" id="fgm-sO-wkF"/>
+                            <constraint firstItem="Mbr-ZQ-yWt" firstAttribute="centerX" secondItem="KHB-G2-MMV" secondAttribute="centerX" id="trq-Ir-0xW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9hH-I5-DKg"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="8cs-6s-htC" id="xUg-nh-qwY"/>
+                        <outlet property="usernameLabel" destination="Mbr-ZQ-yWt" id="6r4-dA-CFS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wI8-6s-Y2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="853"/>
+            <point key="canvasLocation" x="1224.375" y="851.4084507042254"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gfD-F3-3u5">
